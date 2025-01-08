@@ -9,7 +9,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
-app.use(cors());
+const corsOptions = {
+  origin:true,
+  optionsSuccessStatus: 200,
+  credentials:true
+}
+app.use(cors(corsOptions))
+
 app.use(express.json());
 
 // MongoDB connection

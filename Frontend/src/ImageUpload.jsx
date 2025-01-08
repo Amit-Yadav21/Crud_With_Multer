@@ -25,7 +25,7 @@ const ImageUpload = () => {
         formData.append("image", image);
 
         try {
-            const response = await fetch("http://localhost:5000/api/images/upload", {
+            const response = await fetch("https://crud-with-multer.vercel.app/api/images/upload", {
                 method: "POST",
                 body: formData,
             });
@@ -46,7 +46,8 @@ const ImageUpload = () => {
     // Fetch all images
     const fetchImages = async () => {
         try {
-            const response = await fetch("http://localhost:5000/api/images");
+            // http://localhost:5000/api/images
+            const response = await fetch("https://crud-with-multer.vercel.app/api/images");
             const data = await response.json();
             setImages(data);
         } catch (error) {
@@ -60,7 +61,7 @@ const ImageUpload = () => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:5000/api/images/delete/${id}`, {
+            const response = await fetch(`https://crud-with-multer.vercel.app/api/images/delete/${id}`, {
                 method: "DELETE",
             });
             if (response.ok) {
@@ -125,7 +126,7 @@ const ImageUpload = () => {
                     <div key={img._id}>
                         {/* {console.log('yes - ',img.filePath)} */}
                         <img
-                            src={`http://localhost:5000/${img.filePath}`}
+                            src={`https://crud-with-multer.vercel.app/${img.filePath}`}
                             alt={img.name}
                             style={{ width: "250px", height: "200px" }}
                         />
