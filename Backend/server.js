@@ -10,7 +10,8 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const corsOptions = {
-  origin:true,
+  origin: 'http://localhost:5173', // Frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
   optionsSuccessStatus: 200,
   credentials:true
 }
