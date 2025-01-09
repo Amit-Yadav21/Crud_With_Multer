@@ -99,12 +99,12 @@ const ImageUpload = () => {
     return (
         <div style={{ padding: "20px" }}>
             <h2>Image Upload</h2>
-            {/* <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <input type="file" accept="image/*" onChange={handleFileChange} />
                 <button type="submit">Upload</button>
-            </form> */}
+            </form>
             {/* -------------------------- */}
-            <div style={{display:'flex', justifyContent:"center", alignItems:"center"}}>
+            {/* <div style={{display:'flex', justifyContent:"center", alignItems:"center"}}>
                 <FaUpload
                     style={{ fontSize: '24px', cursor: 'pointer' }}
                     onClick={handleIconClick}
@@ -118,7 +118,7 @@ const ImageUpload = () => {
                     style={{ display: 'none' }}
                 />
                 <button onClick={handleSubmit} style={{ marginLeft: 10 }}>Upload</button>
-            </div>
+            </div> */}
             {/* ------------------ */}
             <h3>All Images</h3>
             <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: 10 }}>

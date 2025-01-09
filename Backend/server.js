@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const corsOptions = {
-  origin: 'http://localhost:5173', // Frontend URL
+  origin: ['http://localhost:5173', 'https://crud-with-multer.vercel.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   optionsSuccessStatus: 200,
   credentials:true
